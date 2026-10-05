@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage AI</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">AI</div>
+
+                <div>
+                    <h1>Webpage AI</h1>
+                    <p>Chat with this webpage</p>
+                </div>
+            </div>
+
+            <button id="clearChat" class="icon-button" title="Clear chat">
+                ×
+            </button>
+        </header>
+
+
+        <!-- Page Information -->
+        <section class="page-card">
+
+            <div class="page-status">
+                <span id="statusDot" class="status-dot"></span>
+
+                <div class="page-info">
+                    <span class="page-label">Current webpage</span>
+                    <span id="pageTitle" class="page-title">
+                        Page not loaded
+                    </span>
+                </div>
+            </div>
+
+            <button id="readPage" class="read-button">
+                Read Page
+            </button>
+
+        </section>
+
+
+        <!-- Chat Area -->
+        <main id="chatContainer" class="chat-container">
+
+            <div id="welcomeMessage" class="welcome">
+
+                <div class="welcome-icon">
+                    AI
+                </div>
+
+                <h2>Chat with this webpage</h2>
+
+                <p>
+                    Read the current webpage and ask questions about
+                    its content.
+                </p>
+
+                <div class="suggestions">
+
+                    <button class="suggestion">
+                        Summarize this page
+                    </button>
+
+                    <button class="suggestion">
+                        What is this page about?
+                    </button>
+
+                    <button class="suggestion">
+                        What are the main points?
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+            <span class="loading-dot"></span>
+
+            <span>AI is thinking...</span>
+
+        </div>
+
+
+        <!-- Input Area -->
+        <footer class="input-area">
+
+            <div class="input-wrapper">
+
+                <textarea
+                    id="question"
+                    placeholder="Ask something about this webpage..."
+                    rows="1"
+                ></textarea>
+
+                <button id="sendButton" class="send-button">
+                    →
+                </button>
+
+            </div>
+
+            <div class="footer-text">
+                Powered by LangChain + RAG + Gemini
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
